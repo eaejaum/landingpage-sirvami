@@ -117,6 +117,49 @@ main {
     line-height: 1.6;
 }
 
+.accordion {
+    width: 50%;
+    margin: 0 auto;
+    color: #FF6F3C;
+}
+
+.text-bg-custom {
+    background-color: #FF6F3C;
+    color: white;
+}
+
+.border-custom {
+    border-color: #FF6F3C;
+}
+
+.btn-custom {
+    background-color: #FF6F3C;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #f36434;
+}
+
+.custom-accordion-button {
+    background-color: #ff885d !important;
+    color: #333333 !important;
+    box-shadow: 2px 2px 4px;
+}
+
+.custom-accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    color: #333333;
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
 .fim {
     display: flex;
     justify-content: center;
@@ -187,6 +230,10 @@ footer a {
     .hero {
         flex-direction: column;
         text-align: center;
+    }
+
+    .accordion {
+        width: 100%;
     }
 
     .hero-right h1 {
