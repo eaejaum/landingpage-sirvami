@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #333333;
+    line-height: 1.6;
 }
 
 header {
@@ -13,6 +20,9 @@ header {
     background-color: #2F2E2E;
     color: #FFF;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
@@ -31,18 +41,19 @@ header button {
     color: #FFF;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 header button:hover {
     background-color: #FF6F3C;
+    transform: scale(1.05);
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 5em;
-    padding: 5em;
+    gap: 2em;
+    padding: 2em;
     background-color: #F5F5F5;
     width: 100%;
     margin: 0 auto;
@@ -50,159 +61,246 @@ main {
 
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2em;
+    padding: 2em 2em;
+    margin: -2em -2em;
+    margin-bottom: 0;
+    position: relative;
+    background: url('assets/annie-spratt-UyEmagArOLY-unsplash.jpg') no-repeat center center/cover;
+    background-size: cover;
+    min-height: 100vh;
+    color: #FFF;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.hero-left img {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-.hero-left img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+.hero-content {
+    max-width: 50%;
+    position: relative;
+    z-index: 2;
 }
 
-.hero-right h1 {
+.hero h1 {
     font-size: 4em;
     color: #FF6F3C;
+    margin-bottom: 0.5em;
 }
 
-.hero-right p {
+.hero p {
     font-size: 1.5em;
-    color: #333333;
-    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.hero button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #FF6F3C;
+    border: none;
+    border-radius: 50px;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; 
+    z-index: 2;
+}
+
+.hero button:hover {
+    background-color: #e65b2b;
+    transform: scale(1.05);
 }
 
 .quemSomos {
     text-align: center;
 }
 
-.quemSomos h2 {
+h2 {
     font-size: 2.5em;
     color: #FF6F3C;
     margin-bottom: 1em;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #FF6F3C;
+    margin: 0.5em auto;
 }
 
 .quemSomos p {
     font-size: 1.3em;
     color: #333333;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2em;
 }
 
-.quemSomos span {
-    color: #FF6F3C;
-    font-weight: bold;
+.card {
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .porQueUsar {
+    background: linear-gradient(135deg, #FF6F3C 0%, #FFBF69 100%);
+    color: #FFF;
     text-align: center;
+    padding: 4em 2em;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .porQueUsar h2 {
     font-size: 2.5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.porQueUsar p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion {
+    background-color: #FFF;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #FF6F3C;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: #FF6F3C;
+    color: #FFF;
+    padding: 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #E65B2B;
+}
+
+.accordion-body {
+    padding: .4em;
+    color: #333;
+    background-color: #FFF;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(90deg);
+}
+
+.motivosSirvaMi {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.motivosSirvaMi h2 {
+    font-size: 2.5em;
+    color: #FF6F3C;
+    margin-bottom: 2em;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.card {
+    background-color: #FFF;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.8em;
     color: #FF6F3C;
     margin-bottom: 1em;
 }
 
-.porQueUsar p {
-    font-size: 1.3em;
-    color: #333333;
-    line-height: 1.6;
+.card p {
+    font-size: 1.2em;
+    color: #333;
 }
 
-.accordion {
-    width: 50%;
-    margin: 0 auto;
-    color: #FF6F3C;
-}
-
-.text-bg-custom {
-    background-color: #FF6F3C;
-    color: white;
-}
-
-.border-custom {
-    border-color: #FF6F3C;
-}
-
-.btn-custom {
-    background-color: #FF6F3C;
-    color: white;
-    border: none;
-}
-
-.btn-custom:hover {
-    background-color: #f36434;
-}
-
-.custom-accordion-button {
-    background-color: #ff885d !important;
-    color: #333333 !important;
-    box-shadow: 2px 2px 4px;
-}
-
-.custom-accordion-button:focus {
-    box-shadow: none;
-}
-
-.accordion-body {
-    color: #333333;
-}
-
-.accordion-button::after {
-    filter: brightness(0) invert(1);
-}
-
-.fim {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 2em;
+.card:hover {
+    transform: scale(1.05);
 }
 
 .fim h2 {
-    font-size: 3em;
-    color: #333333;
+    text-align: center;
 }
 
 .download {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 2em;
 }
 
-.download span {
-    font-weight: 500;
-    font-size: .6em;
+.download button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #FF6F3C;
+    border: none;
+    border-radius: 50px;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.playStore, .appStore {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #FFF;
-    color: #333;
-    display: flex;
-    border-radius: 15px;
-    padding: 10px;
-    text-align: left;
-    width: 170px;
-    font-weight: bold;
-    box-shadow: 0px 5px 10px 0px;
-}
-
-.downloadText {
-    line-height: 1em;
+.download button:hover {
+    background-color: #e65b2b;
+    transform: scale(1.05);
 }
 
 footer {
@@ -214,16 +312,14 @@ footer {
     border-top: 4px solid #FF6F3C;
 }
 
-footer p {
-    margin: 0;
-}
-
 footer a {
+    color: #FF6F3C;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.social-media p {
-    color: #CCC;
+footer a:hover {
+    color: #FFF;
 }
 
 @media (max-width: 768px) {
@@ -232,25 +328,29 @@ footer a {
         text-align: center;
     }
 
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
     .accordion {
         width: 100%;
     }
 
-    .hero-right h1 {
-        font-size: 3em;
+    h1 {
+        font-size: 2.5em;
     }
 
-    .hero-right p {
-        font-size: 1.2em;
-    }
-
-    main {
-        padding: 2em;
-    }
-
-    .download button {
-        width: 100%;
-        max-width: 300px;
-        font-size: 1.2em;
+    h2 {
+        font-size: 2em;
     }
 }

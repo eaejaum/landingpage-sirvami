@@ -1,247 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SirvaMi - Sua Receita, Nosso App</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>SirvaMi</title>
-</head>
-
-<body>
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <span>SirvaMi</span>
-        </div>
-        <button>Contatos</button>
+      <div class="logo">SirvaMi</div>
+      <button>Contato</button>
     </header>
+
     <main>
-        <div class="hero">
-            <div class="hero-left">
-                <img src="./assets/annie-spratt-UyEmagArOLY-unsplash.jpg" alt="Imagem de receitas">
-            </div>
-            <div class="hero-right">
-                <h1>SirvaMi</h1>
-                <p>O seu aplicativo de receitas!</p>
-            </div>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Receitas Deliciosas, a Um Clique de Você</h1>
+          <p>
+            Com o SirvaMi, você acessa receitas incríveis e fáceis de fazer,
+            tudo no seu smartphone.
+          </p>
+          <button>Descubra Mais</button>
         </div>
+      </section>
 
-        <div class="quemSomos">
-            <h2>Quem Somos?</h2>
-            <p>
-                Muito mais que um repositório de receitas,
-                o SirvaMi é uma plataforma dedicada à tirar
-                a animosidade da sua refeição.
-            </p>
-            <p>
-                Com pesquisa rápida e assertiva por meio de categorias,
-                a busca por uma receita torna-se simples.
-            </p>
-            <p>
-                Queremos entregar aos usuários uma experiência rápida,
-                intuitiva e fácil.
-            </p>
-            <p>A receita é garantida em <span>3 CLIQUES</span>!</p>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Gratis</h4>
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="https://i.pinimg.com/236x/d8/ba/8a/d8ba8a1b747682d7a91a76fedf7660b0.jpg"
-                            alt="Free Plan" class="mb-3" />
-                        <h1 class="card-title pricing-card-title">$0<small
-                                class="text-body-secondary fw-light">/mo</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>------------</li>
-                            <li>------------</li>
-                            <li>------------</li>
-                            <li>------------</li>
-                        </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Plano 2</h4>
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="https://i.pinimg.com/236x/d8/ba/8a/d8ba8a1b747682d7a91a76fedf7660b0.jpg"
-                            alt="Pro Plan" class="mb-3" />
-                        <h1 class="card-title pricing-card-title">$15<small
-                                class="text-body-secondary fw-light">/mo</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>------------</li>
-                            <li>------------</li>
-                            <li>------------</li>
-                            <li>------------</li>
-                        </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm border-custom">
-                    <div class="card-header py-3 text-bg-custom border-custom">
-                        <h4 class="my-0 fw-normal">Plano 3</h4>
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <img src="https://i.pinimg.com/236x/d8/ba/8a/d8ba8a1b747682d7a91a76fedf7660b0.jpg"
-                            alt="Enterprise Plan" class="mb-3" />
-                        <h1 class="card-title pricing-card-title">$29<small
-                                class="text-body-secondary fw-light">/mo</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>------------</li>
-                            <li>------------</li>
-                            <li>------------</li>
-                            <li>------------</li>
-                        </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-custom">Contact us</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <section class="quemSomos">
+        <h2>Quem Somos</h2>
+        <p>
+          No SirvaMi, acreditamos que cozinhar deve ser fácil, divertido e
+          acessível a todos. <span>Nosso aplicativo</span> oferece receitas para
+          todos os gostos, com foco na simplicidade e no sabor.
+        </p>
+      </section>
 
-        <div class="porQueUsar">
-            <h2>Por que usar o SirvaMi?</h2>
-            <p>
-                O nosso real diferencial vem na pesquisa, que nos atuais
-                concorrentes limita-se por título apenas, entretanto, o
-                SirvaMi é equipado com uma variedade de filtros e categorias.
-            </p>
-            <p>
-                O aplicativo conta com: tabela nutricional, filtro de ingredientes disponíveis ao usuário, construção de
-                cardápio com receitas salvas e notificações.
-            </p>
-        </div>
-        <div class="accordion" id="accordionExample">
+      <section class="porQueUsar">
+        <h2>Por que Usar o SirvaMi?</h2>
+        <p>
+            Porque somos mais do que um simples app de receitas. A cada receita,
+            você terá a facilidade de encontrar ingredientes e instruções passo a
+            passo, além de sugestões personalizadas.
+        </p>
+    
+        <div class="accordion">
             <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button custom-accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
-                    </div>
+                <div class="accordion-header">
+                    <h3>Fácil de Usar</h3>
+                    <span class="icon">&#9654;</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        O SirvaMi foi projetado para ser intuitivo, permitindo que
+                        qualquer pessoa, independente da experiência, consiga cozinhar
+                        receitas incríveis.
+                    </p>
                 </div>
             </div>
+    
             <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed custom-accordion-button" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        Accordion Item #2
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
-                    </div>
+                <div class="accordion-header">
+                    <h3>Receitas Variadas</h3>
+                    <span class="icon">&#9654;</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        Desde pratos rápidos até refeições mais elaboradas, temos algo
+                        para todos os gostos e ocasiões.
+                    </p>
                 </div>
             </div>
+    
             <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed custom-accordion-button" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
-                        Accordion Item #3
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
-                    </div>
+                <div class="accordion-header">
+                    <h3>Dicas Exclusivas</h3>
+                    <span class="icon">&#9654;</span>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed custom-accordion-button" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                        aria-controls="collapseFour">
-                        Accordion Item #4
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
-                    </div>
+                <div class="accordion-body">
+                    <p>
+                        Descubra dicas exclusivas que farão toda a diferença na sua
+                        cozinha, tornando seu preparo mais eficiente e saboroso.
+                    </p>
                 </div>
             </div>
         </div>
-        </div>
-        <div class="fim">
-            <div class="fim-left">
-                <h2>Pronto para transformar sua cozinha?</h2>
-                <p>Faça já o download e venha fazer parte dessa comunidade!</p>
-                <p>Mal podemos esperar para termos você conosco!</p>
-            </div>
-            <div class="download">
-                <div class="playStore">
-                    <a href="#"><img src="./assets/icons8-google-play-store-novo-48.png" alt=""></a>
-                    <div class="downloadText">
-                        <span>GET IT ON</span>
-                        <p>Google Play</p>
-                    </div>
-                </div>
-                <div class="appStore">
-                    <a href="#"><img src="./assets/icons8-apple-app-store-48.png" alt=""></a>
-                    <div class="downloadText">
-                        <span>DOWNLOAD ON THE</span>
-                        <p>App Store</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contatos">
+    </section>
 
+      <section class="motivosSirvaMi">
+        <h2>Motivos para Usar o SirvaMi</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Intuitivo e Fácil de Usar</h3>
+            <p>
+              Não importa seu nível de habilidade na cozinha, o SirvaMi foi
+              projetado para ser simples e eficiente, guiando você com passos
+              claros.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Variedade de Receitas</h3>
+            <p>
+              Com uma vasta gama de receitas, desde pratos rápidos até os mais
+              elaborados, sempre há algo novo para experimentar.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Dicas e Truques Exclusivos</h3>
+            <p>
+              Receba dicas de cozinha práticas e truques para facilitar seu dia
+              a dia na cozinha, tornando o preparo mais rápido e saboroso.
+            </p>
+          </div>
         </div>
+      </section>
+
+      <section class="fim">
+        <h2>Baixe o App Agora!</h2>
+        <div class="download">
+          <button class="playStore">
+            <img
+              src="assets/icons8-google-play-store-novo-48.png"
+              alt="Google Play"
+            />
+            <span class="downloadText">Google Play</span>
+          </button>
+          <button class="appStore">
+            <img src="assets/icons8-apple-app-store-48.png" alt="App Store" />
+            <span class="downloadText">App Store</span>
+          </button>
+        </div>
+      </section>
     </main>
-    <footer>
-        <div class="social-media">
-            <p>Nossas Redes Sociais</p>
-            <a href="#"><img src="./assets/icons8-facebook-48.png" alt=""></a>
-            <a href="#"><img src="./assets/icons8-instagram-48.png" alt=""></a>
-            <a href="#"><img src="./assets/icons8-twitter-48.png" alt=""></a>
-        </div>
-        <p>Todos os direitos reservados &copy;2024</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
 
+    <footer>
+      <p>© 2024 SirvaMi - Todos os direitos reservados.</p>
+      <p>Desenvolvido com <a href="#">amor</a> e dedicação.</p>
+    </footer>
+
+    <script>
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const body = header.nextElementSibling;
+          body.classList.toggle("active");
+
+          if (body.classList.contains("active")) {
+            body.style.maxHeight = body.scrollHeight + "px";
+            header.classList.add("active");
+          } else {
+            body.style.maxHeight = 0;
+            header.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
